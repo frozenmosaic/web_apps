@@ -1,1 +1,7 @@
+# incomplete projects
 dashboard/
+
+# misc
+.ipynb_checkpoints
+dev.code-workspace
+.DS_Store
