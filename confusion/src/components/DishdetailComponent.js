@@ -44,7 +44,7 @@ function RenderComments({ comments }) {
             return (
               <li className="p-3">
                 {c.comment} <br />
-                -- {c.author},
+                -- {c.author}, 
                 {new Intl.DateTimeFormat("en-US", {
                   year: "numeric",
                   month: "short",

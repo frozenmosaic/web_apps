@@ -1,5 +1,5 @@
 .App {
-  text-align: left;
+  text-align: center;
 }
 
 .App-logo {
@@ -37,36 +37,37 @@
   }
 }
 
-.row-header{
-  margin:0px auto;
-  padding:0px auto;
+/* .left {
+  background: grey;  
 }
 
-.row-content {
-  margin:0px auto;
-  padding: 50px 0px 50px 0px;
-  border-bottom: 1px ridge;
-  min-height:400px;
+.right {
+  background: black;  
+} */
+
+.main-wrapper {
+  height: 80vh;  
 }
 
-.footer{
-  background-color: #D1C4E9;
-  margin:0px auto;
-  padding: 20px 0px 20px 0px;
-}
-.jumbotron {
-  padding:70px 30px 70px 30px;
-  margin:0px auto;
-  background: #9575CD ;
-  color:floralwhite;
+.header {
+  height: 10vh;
 }
 
-address{
-  font-size:80%;
-  margin:0px;
-  color:#0f0f0f;
+.footer {
+  height: 10vh;
 }
 
-.navbar-dark {
-  background-color: #512DA8;
+.section {
+  height: 100%;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.half {
+  background: #f9f9f9;
+  height: 50%;  
+  width: 100%;
+  margin: 15px 0;
 }
