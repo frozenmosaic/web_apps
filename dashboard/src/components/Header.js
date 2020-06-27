@@ -1,11 +1,11 @@
 import React from "react";
-import { Navbar, NavbarBrand } from "reactstrap";
 
 function Header(props) {
   return (
-    <div className="header border">
-      <h5>Header</h5>
-    </div>
+    <nav class="navbar navbar-light sticky-top bg-light flex-md-nowrap p-0">
+      <div class="navbar-brand col-sm-3 col-md-2 mr-0">Dashboard</div>
+      <div class="navbar-nav w-100">Metadata</div>
+    </nav>
   );
 }
 
