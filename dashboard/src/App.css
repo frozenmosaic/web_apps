@@ -37,16 +37,17 @@
   }
 }
 
-/* .left {
-  background: grey;  
+.panel {
+  height: 80vh;
 }
 
-.right {
-  background: black;  
-} */
-
-.main-wrapper {
+.section {
   height: 80vh;  
+  justify-content: center;
+}
+
+.top {
+  height: 50%;
 }
 
 .header {
@@ -57,17 +58,12 @@
   height: 10vh;
 }
 
-.section {
-  height: 100%;  
+/* .section {
+  height: 50%;  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.half {
-  background: #f9f9f9;
-  height: 50%;  
-  width: 100%;
-  margin: 15px 0;
-}
+/* https://stackoverflow.com/questions/41448221/bootstrap-fullscreen-layout-with-100-height */

@@ -3,22 +3,29 @@ import { CardBody, CardTitle, Card } from "reactstrap";
 
 function Content(props) {
   return (
-    <section>
-      <div class="main-wrapper border border-primary">
-          Main
-        {/* <div class="section left col-xs-3">
-          <div class="half">
-            <h4>Top left</h4>
+    <div className="section border border-primary">
+      <div className="container-fluid">
+        <div className="row">
+          <div className="panel col border">Left
           </div>
-          <div class="half">
-            <h4>Bottom left</h4>
+          <div className="panel col-9 border">
+              
+              <div className="row border top justify-content-center">
+                  Top
+              </div>
+              <div className="row border top justify-content-center">
+                  Bottom
+              </div>
           </div>
+          {/* <div class="half">
+          <h4>Top left</h4>
         </div>
-        <div class="section right col-xs-9">
-          <h4>Extra step: center stuff here</h4>
+        <div class="half">
+          <h4>Bottom left</h4>
         </div> */}
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
 

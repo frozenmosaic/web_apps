@@ -3,9 +3,11 @@ import { Card, CardBody } from "reactstrap";
 
 function Footer(props) {
   return (
-    <div className="footer">
-      <div className="container">
-        <div className="row justify-content-center">Footer</div>
+    <div className="footer border">
+      <div>
+        <div>
+          <h5>Footer</h5>
+        </div>
       </div>
     </div>
   );
