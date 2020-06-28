@@ -4,6 +4,7 @@ import Header from "./HeaderComponent";
 import Menu from "./MenuComponent";
 import Contact from "./ContactComponent";
 import DishDetail from "./DishdetailComponent";
+import About from './AboutComponent';
 import Footer from "./FooterComponent";
 import { DISHES } from "../shared/dishes";
 import { COMMENTS } from "../shared/comments";
@@ -23,12 +24,6 @@ class Main extends Component {
     };
   }
 
-  //   onDishSelect(dishId) {
-  //     this.setState({
-  //       selectedDish: dishId,
-  //     });
-  //   }
-
   render() {
     const HomePage = () => {
       return (
@@ -37,6 +32,29 @@ class Main extends Component {
           promotion={this.state.promotions.filter((promo) => promo.featured)[0]}
           leader={this.state.leaders.filter((leader) => leader.featured)[0]}
         />
+      );
+    };
+
+    const DishWithId = ({ match }) => {
+      return (
+        <DishDetail
+          dish={
+            this.state.dishes.filter(
+              (dish) => dish.id === parseInt(match.params.dishId, 10)
+            )[0]
+          }
+          comments={
+            this.state.comments.filter(
+              (comment) => comment.dishId === parseInt(match.params.dishId, 10)
+            )
+          }
+        />
+      );
+    };
+
+    const AboutPage = () => {
+      return (
+        <About leaders={this.state.leaders} />
       );
     };
 
@@ -50,8 +68,9 @@ class Main extends Component {
             path="/menu"
             component={() => <Menu dishes={this.state.dishes} />}
           />
+          <Route path="/menu/:dishId" component={DishWithId} />
           <Route exact path="/contactus" component={Contact} />
-          {/* <Route exact path="/aboutus" component={About} /> */}
+          <Route exact path="/aboutus" component={AboutPage} />
           <Redirect to="/home" />
         </Switch>
         {/* <Menu
