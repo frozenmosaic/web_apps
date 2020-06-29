@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Card,
   CardImg,
@@ -7,9 +7,13 @@ import {
   CardBody,
   CardTitle,
   Breadcrumb,
-  BreadcrumbItem
+  BreadcrumbItem,
+  Button,
+  Modal,
+  ModalHeader,
 } from "reactstrap";
 import { Link } from "react-router-dom";
+import CommentForm from "./CommentForm";
 
 function RenderDish({ dish }) {
   if (dish != null) {
@@ -39,7 +43,7 @@ function RenderComments({ comments }) {
             return (
               <li className="p-3">
                 {c.comment} <br />
-                -- {c.author}, 
+                -- {c.author},{" "}
                 {new Intl.DateTimeFormat("en-US", {
                   year: "numeric",
                   month: "short",
@@ -49,6 +53,7 @@ function RenderComments({ comments }) {
             );
           })}
         </ul>
+        <CommentForm />
       </div>
     );
   } else {
@@ -64,6 +69,9 @@ const DishDetail = (props) => {
       <div key={props.dish.Id} className="container">
         <div className="row">
           <Breadcrumb>
+          <BreadcrumbItem>
+              <Link to="/home">Home</Link>
+            </BreadcrumbItem>
             <BreadcrumbItem>
               <Link to="/menu">Menu</Link>
             </BreadcrumbItem>
