@@ -1,5 +1,10 @@
 # tutorials
-node_examples/node_modules
+**/**/node_modules
+calculator
+
+# tinkering
+vue-hw
+vue-app
 
 # test
 test.js

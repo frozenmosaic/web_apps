@@ -44,7 +44,7 @@ function Main(props) {
             <hr />
             <Container className="section">
               <Row className="row">
-                <Col className="justify-content-center">
+                <Col className="border border-primary">
                   <Charts />
                 </Col>
                 <Col className="border border-primary">
