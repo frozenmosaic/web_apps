@@ -1,22 +1,24 @@
 export const ACCOUNTS = [
     {
-        act: "HY",
+        id: 0,
+        act: "A",
         amt: 1000,
-        alloc: 50,
-        ret: 0.08
+        alloc: 0,
     },
     {
-        act: "LY",
+        id: 1,
+        act: "B",
         amt: 1000,
-        alloc: 50,
-        ret: 0.04
+        alloc: 0,
     },
     {
-        act: "LY",
+        id: 2,
+        act: "C",
         amt: 1000,
     }, 
     {
-        act: "LY",
+        id: 3,
+        act: "D",
         amt: 1000,
     },
 ];

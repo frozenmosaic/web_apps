@@ -33,7 +33,7 @@ function RenderDish({ dish }) {
   }
 }
 
-function RenderComments({ comments }) {
+function RenderComments({ comments, addComment, dishId }) {
   if (comments != null) {
     return (
       <div className="col-12 col-md-5 m-1">
@@ -53,7 +53,7 @@ function RenderComments({ comments }) {
             );
           })}
         </ul>
-        <CommentForm />
+        <CommentForm addComment={addComment} dishId={dishId}/>
       </div>
     );
   } else {
@@ -66,7 +66,7 @@ const DishDetail = (props) => {
 
   if (props.dish != null) {
     return (
-      <div key={props.dish.Id} className="container">
+      <div key={props.dish.id} className="container">
         <div className="row">
           <Breadcrumb>
           <BreadcrumbItem>
@@ -83,7 +83,7 @@ const DishDetail = (props) => {
         </div>
         <div className="row">
           <RenderDish dish={props.dish} />
-          <RenderComments comments={props.comments} />
+          <RenderComments comments={props.comments} addComment={props.addComment} dishId={props.dish.id}/>
         </div>
       </div>
     );

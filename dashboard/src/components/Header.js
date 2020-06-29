@@ -12,12 +12,12 @@ function Header(props) {
 
   return (
     <nav class="navbar navbar-light bg-light p-0">
-      <Row className="justify-content-center">
+      <Row className="">
         <Col>
-          <div class="navbar-brand p-2">Dashboard</div>
+          <div class="navbar-brand col-sm-3 col-md-2 mr-0 p-2">Dashboard</div>
         </Col>
-        <Col className="p-2">{endDate}</Col>
-        <Col className="p-2">{today}</Col>
+        <Col className="offset-2 p-2">{endDate}</Col>
+        <Col className="offset-2 p-2">{today}</Col>
       </Row>
     </nav>
   );
