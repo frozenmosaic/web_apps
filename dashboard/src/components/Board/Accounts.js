@@ -12,8 +12,6 @@ class Accounts extends Component {
   handleKeyPress(event) {
     if (event.key === "Enter") {
       this.props.addAlloc(event.target.id, event.target.value);
-
-      // alert(event.target.id);
     }
   }
 
